@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA APOD</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page">
+    <div class="card">
+      <div class="button-row">
+        <a class="nav-btn" href="index.html">About Me</a>
+        <a class="nav-btn" href="portfolio.html">Portfolio</a>
+        <a class="nav-btn" href="apod.html">APOD</a>
+        <a class="nav-btn" href="Chickens.html">Chicken Pictures</a>
+      </div>
+
+      <h1>NASA Astronomy Picture of the Day</h1>
+      <p>Explore a new space image and its explanation from NASA every day.</p>
+
+      <div class="button-row">
+        <button class="nav-btn" id="random-apod-btn" type="button">Load Random APOD Date</button>
+      </div>
+
+      <div id="apod-card" class="apod-card">
+        <div class="apod-loading">Loading today's cosmic image...</div>
+      </div>
+
+      <p><a class="nav-btn back-btn" href="index.html">Back to Home</a></p>
+    </div>
+
+    <script src="apod.js"></script>
+  </body>
+</html>
