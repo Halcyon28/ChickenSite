@@ -7,14 +7,29 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="page">
-    <div class="card">
-      <div class="button-row">
-        <a class="nav-btn" href="index.html">About Me</a>
+    <div class="container">
+      <header class="topbar">
+        <div class="site-brand">
+          <span class="site-logo">〇△□</span>
+          <div>
+            <h1>Pulse Web</h1>
+            <p>Squid Game-inspired portfolio</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">Dark</button>
+        </div>
+      </header>
+
+      <nav class="main-nav">
+        <a class="nav-btn" href="index.html">Home</a>
         <a class="nav-btn" href="portfolio.html">Portfolio</a>
         <a class="nav-btn" href="apod.html">APOD</a>
         <a class="nav-btn" href="Chickens.html">Chicken Pictures</a>
-      </div>
-      <h1>Chickens</h1>
+      </nav>
+
+      <div class="card">
+        <h1>Chickens</h1>
       <p>Here are some pictures that I took of my chickens!</p>
       <div class="portfolio-box">
         <img src="C1.jpeg" alt="Chicken 1" />
@@ -26,6 +41,8 @@
         <img src="group.jpeg" alt="Chicken group" />
       </div>
       <p><a class="nav-btn back-btn" href="index.html">Back to Home</a></p>
-    </div>
+        </div>
+      </div>
+      <script src="./theme.js"></script>
   </body>
 </html>

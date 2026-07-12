@@ -1,6 +1,6 @@
 const apodCard = document.getElementById('apod-card');
 const randomBtn = document.getElementById('random-apod-btn');
-const apiKey = import.meta.env.VITE_NASA_API_KEY;
+const apiKey = import.meta.env?.VITE_NASA_API_KEY;
 
 function randomDate() {
   const start = new Date('1995-06-16');
@@ -11,6 +11,11 @@ function randomDate() {
 }
 
 async function loadApod(date = '') {
+  if (!apiKey) {
+    apodCard.innerHTML = '<p class="apod-error">API key not found. Make sure your .env file contains VITE_NASA_API_KEY and that you are serving the page with Vite.</p>';
+    return;
+  }
+
   apodCard.innerHTML = '<div class="apod-loading">Loading cosmic image...</div>';
 
   try {
@@ -20,7 +25,8 @@ async function loadApod(date = '') {
 
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error(`Unable to load APOD data: ${response.status}`);
+      const message = await response.text();
+      throw new Error(`Unable to load APOD data: ${response.status} ${message}`);
     }
 
     const data = await response.json();
@@ -35,7 +41,7 @@ async function loadApod(date = '') {
     `;
   } catch (error) {
     console.error(error);
-    apodCard.innerHTML = '<p class="apod-error">Could not load the APOD image right now. Please try again later.</p>';
+    apodCard.innerHTML = `<p class="apod-error">Could not load the APOD image right now. ${error.message}</p>`;
   }
 }
 

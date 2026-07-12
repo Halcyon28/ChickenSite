@@ -8,23 +8,41 @@
   </head>
   <body>
     <div class="container">
-      <section class="hero">
-        <h1>Welcome to My Homepage</h1>
-        <p>Here is a little about me, with quick links to explore more.</p>
-      </section>
+      <header class="topbar">
+        <div class="site-brand">
+          <span class="site-logo">〇△□</span>
+          <div>
+            <h1>Squid Site</h1>
+            <p>Squid Game inspired website project</p>
+          </div>
+        </div>
 
-      <div class="button-row">
-        <a class="nav-btn" href="#about">About Me</a>
+        <div class="topbar-actions">
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">Dark</button>
+        </div>
+      </header>
+
+      <nav class="main-nav">
         <a class="nav-btn" href="portfolio.html">Portfolio</a>
         <a class="nav-btn" href="apod.html">APOD</a>
         <a class="nav-btn" href="Chickens.html">Chicken Pictures</a>
-      </div>
+      </nav>
+
+      <section class="hero hero-squid">
+        <div class="hero-content">
+          <span class="hero-label">Welcome!</span>
+          <h1>This is my squid game inspired website!</h1>
+          <p>Explore my projects, portfolio, and a NASA APOD feature.</p>
+        </div>
+      </section>
 
       <section class="about-section" id="about">
         <h2>About Me</h2>
-        <p>I am a student who enjoys exploring technology, building fun and creative projects using python or godot, and learning new skills. I am especially interested in game development, software creation, and problem-solving through code.</p>
+        <p>I am a high school student who enjoys exploring technology, building fun and creative projects using python or godot, and learning new skills. I am especially interested in game development, 3D modling, and working on simple engineering based projects.</p>
         <p>I also enjoy mathematics, and I'm currently taking AP calculus BC and hoping that I can get a 5 on the exam, and I also like aerospace engineering and I hope that one day I will be able to get into a UC school as a aerospace engineer major or a different engineering based major. My goal is to keep creating fun projects that may inspire other people.</p>
       </section>
     </div>
+
+    <script src="./theme.js"></script>
   </body>
 </html>
